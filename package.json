@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node src/app.js",
     "dev": "nodemon ./src/app.js",
-    "lint": "eslint \"**/*.js\"",
+    "lint": "eslint \"**/*.js\" && prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,7 +23,8 @@
     "app-module-path": "^2.2.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "mongoose": "^5.9.18"
+    "mongoose": "^5.9.18",
+    "prettier": "^2.3.0"
   },
   "devDependencies": {
     "eslint": "^7.2.0",
