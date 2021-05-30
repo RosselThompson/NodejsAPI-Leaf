@@ -4,7 +4,9 @@
   "description": "Proyecto API para el Sistema de Facturación e inventario *Leaf* desarrollado en node Js, express y mongodb",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "node src/app.js",
+    "dev": "nodemon ./src/app.js",
+    "lint": "eslint \"**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,7 +20,7 @@
   },
   "homepage": "https://github.com/RosselUNI/NodejsAPI-Leaf#readme",
   "dependencies": {
-    "bcrypt": "^5.0.0",
+    "app-module-path": "^2.2.0",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mongoose": "^5.9.18"

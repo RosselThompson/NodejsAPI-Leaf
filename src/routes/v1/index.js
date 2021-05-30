@@ -1,7 +1,9 @@
 const userRoute = require('./userRoute');
 const companyRoute = require('./companyRoute');
 
+const prefix = '/api/v1';
+
 module.exports = (app) => {
-  app.use('/api/v1/user', userRoute);
-  app.use('/api/v1/company', companyRoute);
+  app.use(`${prefix}/user`, userRoute);
+  app.use(`${prefix}/company`, companyRoute);
 };

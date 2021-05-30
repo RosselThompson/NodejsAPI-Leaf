@@ -1,7 +1,9 @@
-require('dotenv').config();
+require('app-module-path').addPath('src'); // ABSOLUTE PATH
+require('dotenv').config(); // ENV VARIABLES
+
 const express = require('express');
 const mongoose = require('mongoose');
-const routes = require('./routes');
+const routes = require('routes');
 
 const app = express();
 const port = process.env.PORT || 8080;
@@ -9,7 +11,6 @@ const dbConnection = process.env.DB_CONNECTION || '';
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
 routes.v1(app);
 
 mongoose.connect(
